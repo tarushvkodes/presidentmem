@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidents Memorization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Memorize Presidents</h1>
+        <p>Learn and test your knowledge of U.S. Presidents in a clean and interactive way.</p>
+    </header>
+    <main>
+        <section id="quiz-section">
+            <h2>Interactive Quiz</h2>
+            <div id="range-selector">
+                <h3>Select Presidents Range</h3>
+                <div class="range-controls">
+                    <div class="range-input">
+                        <label for="start-president">Start President:</label>
+                        <select id="start-president">
+                            <!-- Options will be dynamically filled -->
+                        </select>
+                    </div>
+                    <div class="range-input">
+                        <label for="end-president">End President:</label>
+                        <select id="end-president">
+                            <!-- Options will be dynamically filled -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="quiz-container">
+                <!-- Quiz content will be dynamically added here -->
+            </div>
+            <button id="start-quiz">Start Quiz</button>
+        </section>
+        
+        <section id="reference-section">
+            <h2>Presidents Reference</h2>
+            <p>Study this list of presidents with their number and party affiliation before taking the quiz.</p>
+            <div id="filter-controls">
+                <label for="party-filter">Filter by party:</label>
+                <select id="party-filter">
+                    <option value="all">All Parties</option>
+                    <option value="No Party">No Party</option>
+                    <option value="Federalist">Federalist</option>
+                    <option value="Democratic-Republican">Democratic-Republican</option>
+                    <option value="Democratic">Democratic</option>
+                    <option value="Whig">Whig</option>
+                    <option value="Republican">Republican</option>
+                </select>
+            </div>
+            <div class="table-container">
+                <table id="presidents-table">
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Name</th>
+                            <th>Party</th>
+                            <th>Term</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be dynamically populated from JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Memorize Presidents. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
