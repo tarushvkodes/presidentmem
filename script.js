@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Validate range
         if (startNumber > endNumber) {
             // Swap values if start is greater than end
-            document.getElementById('end-president').value = startNumber;
+            const temp = startNumber;
             document.getElementById('start-president').value = endNumber;
-            return highlightSelectedRange(); // Re-run with corrected values
+            document.getElementById('end-president').value = temp;
         }
         
         // Clear existing highlights
@@ -286,7 +286,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function getOrdinal(n) {
         const s = ['th', 'st', 'nd', 'rd'];
         const v = n % 100;
-        return (s[(v - 20) % 10] || s[v] || s[0]);
+        if (v >= 11 && v <= 13) {
+            return s[0]; // "th" for 11, 12, 13
+        }
+        return s[(n % 10)] || s[0];
     }
 
     function checkAnswer() {
